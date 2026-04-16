@@ -94,13 +94,10 @@ CREATE TABLE products (
     em_promocao BOOLEAN DEFAULT FALSE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-🔹 Definir usuário administrador
+🔹 Criar usuário administrador
 
-Após cadastrar um usuário, execute:
-
-UPDATE users
-SET is_admin = 1
-WHERE email = 'admin@supermercado.com';
+INSERT INTO users (nome, email, senha, cpf, is_admin)
+VALUES ('Administrador', 'admin@supermercado.com', '123456', '000.000.000-00', 1);
 
 
 ▶️ Como executar o projeto
